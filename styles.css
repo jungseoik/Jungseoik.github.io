@@ -36,6 +36,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html[lang="ko"] body {
+  word-break: keep-all;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -145,7 +149,7 @@ img {
 
 .site-nav a {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 650;
   transition: color 160ms ease;
 }
@@ -156,16 +160,50 @@ img {
   color: var(--blue);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 10px;
+}
+
+.language-switch {
+  display: flex;
+  padding: 3px;
+  border: 1px solid rgba(23, 32, 53, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.language-switch button {
+  min-width: 46px;
+  height: 34px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.language-switch button[aria-pressed="true"] {
+  background: var(--surface);
+  color: var(--blue);
+  box-shadow: 0 2px 8px rgba(31, 42, 72, 0.1);
+}
+
 .nav-contact {
   display: inline-flex;
   align-items: center;
-  justify-self: end;
   gap: 10px;
   padding: 10px 15px;
   border-radius: 999px;
   background: var(--ink);
   color: #fff;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   transition: transform 160ms ease, background-color 160ms ease;
 }
@@ -225,7 +263,7 @@ img {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
   color: var(--blue-dark);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -251,6 +289,12 @@ img {
   font-weight: 760;
   letter-spacing: -0.065em;
   line-height: 0.98;
+}
+
+html[lang="ko"] .hero h1 {
+  font-size: clamp(3.7rem, 5.8vw, 5.6rem);
+  letter-spacing: -0.055em;
+  line-height: 1.08;
 }
 
 .hero h1 em {
@@ -317,7 +361,7 @@ img {
 
 .profile-links a {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   border-bottom: 1px solid transparent;
 }
@@ -396,14 +440,14 @@ img {
 
 .note-role > span:last-child {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
 }
 
 .note-role strong {
   display: block;
   color: var(--ink);
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .note-icon {
@@ -432,38 +476,48 @@ img {
 
 .note-papers span {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.25;
 }
 
-.hero-strip {
+.focus-grid {
   display: grid;
-  min-height: 92px;
   grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 38px;
+  padding-bottom: 34px;
+}
+
+.focus-item {
+  display: flex;
+  min-height: 82px;
   align-items: center;
-  margin-top: 44px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  gap: 14px;
+  padding: 18px 20px;
+  border: 1px solid rgba(23, 32, 53, 0.08);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 10px 24px rgba(38, 53, 91, 0.04);
 }
 
-.hero-strip span {
-  position: relative;
-  padding-left: 22px;
+.focus-item > span {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.focus-item strong {
   color: var(--muted);
-  font-size: 12px;
-  font-weight: 680;
-}
-
-.hero-strip span::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--blue);
-  content: "";
-  transform: translateY(-50%);
+  font-size: 15px;
+  font-weight: 730;
+  line-height: 1.35;
 }
 
 @keyframes rise-in {
@@ -478,7 +532,7 @@ img {
 .section-label {
   margin: 0 0 18px;
   color: var(--blue);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 760;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -543,7 +597,7 @@ img {
 
 .card-number {
   color: currentColor;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 760;
   opacity: 0.58;
 }
@@ -582,7 +636,7 @@ img {
 .capability-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .card-blue p {
@@ -604,7 +658,7 @@ img {
 .section-topline > p {
   max-width: 360px;
   padding-bottom: 8px;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .project-grid {
@@ -639,7 +693,7 @@ img {
   gap: 13px;
   align-items: center;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 760;
   letter-spacing: 0.1em;
 }
@@ -668,7 +722,7 @@ img {
 .project-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .project-featured p {
@@ -686,7 +740,7 @@ img {
   padding: 6px 10px;
   border: 1px solid rgba(23, 32, 53, 0.12);
   border-radius: 999px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 680;
 }
 
@@ -790,7 +844,7 @@ img {
   align-items: center;
   gap: 7px;
   color: #b9c8df;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .frame-status i {
@@ -809,7 +863,7 @@ img {
   border-radius: 999px;
   background: rgba(17, 27, 61, 0.3);
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   backdrop-filter: blur(8px);
 }
@@ -849,7 +903,7 @@ img {
 
 .mini-chart span {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 650;
 }
 
@@ -887,7 +941,7 @@ img {
   border: 1px solid rgba(23, 32, 53, 0.12);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.48);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 720;
 }
 
@@ -934,14 +988,14 @@ img {
 
 .paper-year {
   color: var(--blue);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 750;
 }
 
 .paper-copy > p:first-child {
   margin: 0 0 12px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 750;
   letter-spacing: 0.08em;
 }
@@ -952,12 +1006,13 @@ img {
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1.24;
+  overflow-wrap: anywhere;
 }
 
 .paper-result {
   margin: 16px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .paper-links {
@@ -968,7 +1023,7 @@ img {
 
 .paper-links a {
   color: var(--blue);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 750;
 }
 
@@ -1018,12 +1073,12 @@ img {
 }
 
 .summary-profile strong {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .summary-profile span {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .experience-summary > p {
@@ -1047,14 +1102,14 @@ img {
 .summary-focus span {
   margin-bottom: 4px;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .summary-focus strong {
   color: var(--blue-dark);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .timeline {
@@ -1072,7 +1127,7 @@ img {
 .timeline-date {
   padding-top: 4px;
   color: var(--blue);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 760;
 }
 
@@ -1085,7 +1140,7 @@ img {
 .timeline-org {
   margin: 2px 0 15px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -1093,7 +1148,7 @@ img {
   max-width: 580px;
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .toolkit {
@@ -1108,7 +1163,7 @@ img {
 .toolkit > p {
   margin: 6px 0 0;
   color: var(--blue);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 760;
   text-transform: uppercase;
 }
@@ -1125,7 +1180,7 @@ img {
   border-radius: 999px;
   background: var(--bg);
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 650;
 }
 
@@ -1182,7 +1237,7 @@ img {
 .contact-email span {
   margin-bottom: 8px;
   color: #cbd6ff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -1213,7 +1268,7 @@ img {
 
 .contact-socials a {
   color: #e0e6ff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -1228,7 +1283,7 @@ img {
   justify-content: space-between;
   gap: 24px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 650;
 }
 
@@ -1491,14 +1546,19 @@ img {
     left: -5px;
   }
 
-  .hero-strip {
+  .focus-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px 10px;
-    padding: 20px 0;
+    gap: 10px;
+    padding-bottom: 24px;
   }
 
-  .hero-strip span {
-    font-size: 10px;
+  .focus-item {
+    min-height: 76px;
+    padding: 14px;
+  }
+
+  .focus-item strong {
+    font-size: 14px;
   }
 
   .section {
@@ -1568,7 +1628,7 @@ img {
 
   .delivery-flow span {
     padding: 8px 9px;
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .publication-layout {

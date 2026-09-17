@@ -8,6 +8,7 @@ Personal portfolio for [Seoik Jung](https://jungseoik.github.io/) — an AI soft
 - Three first-author publications with DOI and arXiv links
 - Experience, education, and a practical ML systems toolkit
 - Responsive, portrait-led interface with accessible navigation
+- Korean-first content with an instant Korean/English language switch
 - Automated deployment to GitHub Pages
 
 ## Local preview
