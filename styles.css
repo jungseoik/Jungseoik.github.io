@@ -37,6 +37,7 @@ body {
 }
 
 html[lang="ko"] body {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Noto Sans CJK KR", "Malgun Gothic", var(--sans);
   word-break: keep-all;
 }
 
@@ -267,12 +268,20 @@ img {
   font-weight: 700;
 }
 
-.availability > span {
+.availability > span:first-child {
   width: 7px;
   height: 7px;
+  flex: 0 0 7px;
   border-radius: 50%;
   background: #33b874;
   box-shadow: 0 0 0 4px rgba(51, 184, 116, 0.13);
+}
+
+.availability > span:last-child {
+  width: auto;
+  height: auto;
+  line-height: 1.35;
+  white-space: nowrap;
 }
 
 .hello {
@@ -280,6 +289,8 @@ img {
   color: var(--muted);
   font-size: 18px;
   font-weight: 650;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 .hero h1 {
