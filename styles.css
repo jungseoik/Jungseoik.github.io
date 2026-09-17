@@ -254,45 +254,6 @@ img {
   animation: rise-in 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.availability {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 38px;
-  padding: 8px 13px;
-  border: 1px solid rgba(49, 94, 232, 0.16);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  color: var(--blue-dark);
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.availability > span:first-child {
-  width: 7px;
-  height: 7px;
-  flex: 0 0 7px;
-  border-radius: 50%;
-  background: #33b874;
-  box-shadow: 0 0 0 4px rgba(51, 184, 116, 0.13);
-}
-
-.availability > span:last-child {
-  width: auto;
-  height: auto;
-  line-height: 1.35;
-  white-space: nowrap;
-}
-
-.hello {
-  margin: 0 0 8px;
-  color: var(--muted);
-  font-size: 18px;
-  font-weight: 650;
-  line-height: 1.4;
-  white-space: nowrap;
-}
-
 .hero h1 {
   max-width: 720px;
   margin: 0;
@@ -1498,10 +1459,6 @@ html[lang="ko"] .hero h1 {
   .hero-grid {
     min-height: 0;
     gap: 70px;
-  }
-
-  .availability {
-    margin-bottom: 30px;
   }
 
   .hero h1 {
