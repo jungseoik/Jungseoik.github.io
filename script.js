@@ -1,29 +1,8 @@
-const root = document.documentElement;
 const header = document.querySelector("[data-header]");
-const themeToggle = document.querySelector(".theme-toggle");
 const menuButton = document.querySelector(".menu-button");
 const siteNav = document.querySelector(".site-nav");
 const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
 const year = document.querySelector("[data-year]");
-
-const savedTheme = localStorage.getItem("theme");
-const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
-
-root.dataset.theme = initialTheme;
-updateThemeLabel();
-
-function updateThemeLabel() {
-  const dark = root.dataset.theme === "dark";
-  themeToggle?.setAttribute("aria-label", `Switch to ${dark ? "light" : "dark"} theme`);
-  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#0f1217" : "#f4f5f7");
-}
-
-themeToggle?.addEventListener("click", () => {
-  root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", root.dataset.theme);
-  updateThemeLabel();
-});
 
 menuButton?.addEventListener("click", () => {
   const open = menuButton.getAttribute("aria-expanded") === "true";
@@ -40,7 +19,7 @@ navLinks.forEach((link) => {
 
 window.addEventListener(
   "scroll",
-  () => header?.classList.toggle("is-scrolled", window.scrollY > 16),
+  () => header?.classList.toggle("is-scrolled", window.scrollY > 14),
   { passive: true },
 );
 
@@ -57,7 +36,7 @@ const sectionObserver = new IntersectionObserver(
       link.classList.toggle("active", link.getAttribute("href") === `#${visible.target.id}`);
     });
   },
-  { rootMargin: "-25% 0px -60% 0px", threshold: [0.01, 0.25, 0.5] },
+  { rootMargin: "-28% 0px -62% 0px", threshold: [0.01, 0.2, 0.5] },
 );
 
 sections.forEach((section) => sectionObserver.observe(section));

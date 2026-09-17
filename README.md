@@ -7,7 +7,7 @@ Personal portfolio for [Seoik Jung](https://jungseoik.github.io/) — an AI soft
 - Selected engineering focus areas, described without proprietary client details
 - Three first-author publications with DOI and arXiv links
 - Experience, education, and a practical ML systems toolkit
-- Responsive light/dark interface with accessible navigation
+- Responsive, portrait-led interface with accessible navigation
 - Automated deployment to GitHub Pages
 
 ## Local preview
