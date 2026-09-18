@@ -1,5 +1,9 @@
 const translations = {
   ko: {
+    "carousel.label": "프로젝트 슬라이드 — 좌우 방향키로 이동",
+    "carousel.choose": "프로젝트 선택",
+    "carousel.previous": "이전 프로젝트",
+    "carousel.next": "다음 프로젝트",
     "work.inspect": "원인 분석",
     "work.isolate": "연산 격리",
     "work.restore": "정밀도 조정",
@@ -92,6 +96,10 @@ const translations = {
     "footer.top": "맨 위로 ↑",
   },
   en: {
+    "carousel.label": "Project slides — navigate with left and right arrow keys",
+    "carousel.choose": "Choose a project",
+    "carousel.previous": "Previous project",
+    "carousel.next": "Next project",
     "work.inspect": "Diagnose",
     "work.isolate": "Isolate",
     "work.restore": "Tune precision",
