@@ -19,8 +19,10 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://jungseoik.github.io/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260917-3" />
-    <script src="script.js?v=20260917-3" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260918-1" />
+    <link rel="stylesheet" href="experience.css?v=20260918-1" />
+    <script src="script.js?v=20260918-1" defer></script>
+    <script src="interactions.js?v=20260918-1" defer></script>
     <title>정서익 · AI 소프트웨어 엔지니어</title>
     <script type="application/ld+json">
       {
@@ -46,6 +48,7 @@
     </script>
   </head>
   <body>
+    <div class="reading-progress" aria-hidden="true"></div>
     <a class="skip-link" href="#main" data-i18n="a11y.skip">본문으로 건너뛰기</a>
 
     <header class="site-header" data-header>
@@ -193,10 +196,10 @@
               <div class="project-meta"><span>02</span><span data-i18n="work.card2Meta">최적화</span></div>
               <h3 data-i18n="work.card2Title">저정밀도 변환 이후 무너진 정확도를 복구하다.</h3>
               <p data-i18n="work.card2Body">양자화 성능 저하를 민감 연산까지 추적하고, 실제 활성화 분포로 문제를 격리해 선택적 정밀도로 수치 안정성을 복구했습니다.</p>
-              <div class="mini-chart" aria-label="개념적 수치 정렬 차트" data-i18n-aria="a11y.chart">
-                <div><span data-i18n="work.baseline">기준</span><i style="--bar: 100%"></i></div>
-                <div><span data-i18n="work.lowPrecision">저정밀도</span><i style="--bar: 45%"></i></div>
-                <div class="recovered"><span data-i18n="work.recovered">복구</span><i style="--bar: 96%"></i></div>
+              <div class="precision-steps">
+                <span>01 <strong data-i18n="work.inspect">원인 분석</strong></span>
+                <span>02 <strong data-i18n="work.isolate">연산 격리</strong></span>
+                <span>03 <strong data-i18n="work.restore">정밀도 조정</strong></span>
               </div>
               <div class="tags"><span>TensorRT</span><span>NPU</span><span>PTQ</span></div>
             </article>

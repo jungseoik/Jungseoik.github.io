@@ -1,5 +1,8 @@
 const translations = {
   ko: {
+    "work.inspect": "원인 분석",
+    "work.isolate": "연산 격리",
+    "work.restore": "정밀도 조정",
     "meta.title": "정서익 · AI 소프트웨어 엔지니어",
     "meta.description": "정서익은 멀티모달 영상 AI, 효율적인 추론, 프로덕션 ML 시스템을 개발하는 AI 소프트웨어 엔지니어입니다.",
     "meta.ogDescription": "모델 학습부터 프로덕션 추론까지, 현장에서 작동하는 영상 AI를 만듭니다.",
@@ -89,6 +92,9 @@ const translations = {
     "footer.top": "맨 위로 ↑",
   },
   en: {
+    "work.inspect": "Diagnose",
+    "work.isolate": "Isolate",
+    "work.restore": "Tune precision",
     "meta.title": "Seoik Jung · AI Software Engineer",
     "meta.description": "Seoik Jung is an AI Software Engineer building multimodal video intelligence, efficient inference, and production ML systems.",
     "meta.ogDescription": "I build video AI that works in the real world — from model training to production inference.",
